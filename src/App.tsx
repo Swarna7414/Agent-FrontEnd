@@ -1,9 +1,12 @@
 import React from "react";
-import TODO from "./Components/TODO";
+// import Model from "./Components/Model";
+import News from "./Components/News";
 
 const App:React.FC=()=>{
     return(
-        <TODO/>
+        <div>
+            <News/>
+        </div>
     );
 }
-export default App;
+export default App
