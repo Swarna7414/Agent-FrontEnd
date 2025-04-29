@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,3 +53,7 @@ export default tseslint.config({
   },
 })
 ```
+=======
+# Agent-FrontEnd
+This project employs Reinforcement Learning (RL) to generate Bitcoin trading suggestions (Buy/Hold/Sell). By training an RL agent on historical data and integrating real-time Bitcoin prices along with relevant news, the system aims to provide users with intelligent and timely guidance on potential trading actions.
+>>>>>>> 25a5c37c09e5aa5150942d4d2cbbf6018f775bc7
