@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { API } from "./interfaces";
 
-const Model:React.FC=()=>{
+const Agent:React.FC=()=>{
     const [api,setapi]=useState<API>({
         action:null,
         networth:null,
@@ -13,7 +13,7 @@ const Model:React.FC=()=>{
 
     const FetchStatus = async() =>{
         try{
-            const response = await fetch('http://127.0.0.1:8000/status');
+            const response = await fetch('http://127.0.0.1:8000/statu');
             const data= await response.json();
             setapi({
                 action:data.action,
@@ -51,4 +51,4 @@ const Model:React.FC=()=>{
         </section>
     )
 }
-export default Model
+export default Agent;
