@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
                 : "text-white hover:bg-black hover:text-white px-4 py-2 rounded-md font-semibold transition duration-300"
             }
           >
-            About this Agent
+            About Swarna
           </NavLink>
         </div>
       </nav>
