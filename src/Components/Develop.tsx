@@ -86,7 +86,7 @@ const Agent: React.FC = () => {
         <div className="flex flex-row items-center justify-between h-110 w-auto">
           <div className="h-60 ml-16 w-100 rounded-2xl shadow-xl shadow-gray-200 hover:shadow-blue-400 duration-300 flex flex-col gap-1.5 px-2 pl-5 cursor-pointer">
             <h1 className="font-semibold ml-25 text-2xl">Agent Prediction</h1>
-            <p><strong>Action: </strong> {api.action}</p>
+            <p><strong>Action: </strong> {api.action === "HOLD" && api.BTC === "0.0000" ? "Wait" : api.action}</p>
             <p><strong>Total Cash: </strong> {api.totalcash}</p>
             <p><strong>BTC Holding Right Now: </strong> {api.BTC}</p>
             <p><strong>Money Left: </strong> {api.moneyleft}</p>
