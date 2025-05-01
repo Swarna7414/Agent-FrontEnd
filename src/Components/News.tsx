@@ -8,7 +8,7 @@ const News:React.FC=()=>{
 
     const fetchHeadlines = async ()=> {
         try{
-            const response= await fetch("http://127.0.0.1:8000/news");
+            const response= await fetch("https://web-production-7ce7.up.railway.app/news");
             const data= await response.json();
             setheadlines(data.headlines);
         }catch (error){
@@ -18,7 +18,7 @@ const News:React.FC=()=>{
 
     const FetchSentiment = async ()=>{
         try{
-            const response = await fetch("http://127.0.0.1:8000/sentiment")
+            const response = await fetch("https://web-production-7ce7.up.railway.app/sentiment")
             const data = await response.json();
             setsentiment(data.sentiment)
         }catch (error){

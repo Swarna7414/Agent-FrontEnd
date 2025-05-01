@@ -4,7 +4,6 @@ import Agent from "./Components/Agent";
 import News from "./Components/News"
 import About from "./Components/About";
 import Navbar from "./Navbar";
-import Develop from "./Components/Develop";
 
 const App: React.FC = () => {
     return (
@@ -12,7 +11,7 @@ const App: React.FC = () => {
         <Navbar />
   
         <Routes>
-          <Route path="/" element={<Develop />} />
+          <Route path="/" element={<Agent />} />
           <Route path="/agent" element={<Agent />} />
           <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
