@@ -1,8 +1,9 @@
 export interface API{
     action:string |null,
-    networth:number | null,
-    BTC:number | null,
-    sentiment:number | null,
-    price:number | null,
-    profit:number | null
+    totalcash:number | null,
+    BTC:number | string| null,
+    moneyleft:string | number | null,
+    BTCliveprice:number | string | null,
+    Sentiment:string | number | null,
+    Profit_Loss: string | number | null
 }
