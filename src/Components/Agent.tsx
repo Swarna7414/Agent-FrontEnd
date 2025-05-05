@@ -83,26 +83,42 @@ const Agent: React.FC = () => {
   return (
     <section>
       <div className="flex flex-col gap-2 mt-4 px-6">
-        <div className="flex flex-row items-center justify-between h-110 w-auto">
-          <div className="h-60 ml-16 w-100 rounded-2xl shadow-xl shadow-gray-200 hover:shadow-blue-400 duration-300 flex flex-col gap-1.5 px-2 pl-5 cursor-pointer">
-            <h1 className="font-semibold ml-25 text-2xl">Agent Prediction</h1>
+        
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between h-auto w-auto gap-4">
+          
+          <div className="mt-18 h-auto w-full lg:w-[400px] rounded-2xl shadow-xl shadow-gray-200 hover:shadow-blue-400 duration-300 flex flex-col gap-1.5 px-4 py-4 cursor-pointer">
+            <h1 className="font-semibold text-2xl">Swarna's Prediction</h1>
             <p><strong>Action: </strong> {api.action}</p>
             <p><strong>Total Cash: </strong> {api.totalcash}</p>
             <p><strong>BTC Holding Right Now: </strong> {api.BTC}</p>
             <p><strong>Money Left: </strong> {api.moneyleft}</p>
             <p><strong>BTC Live Price: </strong> {api.BTCliveprice}</p>
-            <p><strong>Sentiment Score: </strong> {api.Sentiment}</p>
+            <p><strong>Sentiment: </strong> {api.Sentiment}</p>
             <p><strong>Profit/Loss: </strong> {api.Profit_Loss}</p>
           </div>
 
-          <div className="h-100 ml-16 flex-1 rounded-2xl shadow-xl shadow-gray-200 hover:shadow-blue-400 duration-300 pt-1 pl-1 flex flex-col">
-            <h1 className="text-xl font-bold ml-90">Today's Balance Graph</h1>
-            <div className="ml-5 mt-5 h-[300px] w-full pr-6">
+          {/* Graph */}
+          <div className="h-auto w-full flex-1 rounded-2xl shadow-xl shadow-gray-200 hover:shadow-blue-400 duration-300 pt-4 pl-4">
+            <h1 className="text-xl font-bold text-center lg:text-left">Today's Balance Graph</h1>
+            <div className="mt-5 h-[300px] w-full pr-4">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={networthHistory}>
                   <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="step" label={{ value: "Steps", position: "insideBottom", offset: -5 }} />
-                  <YAxis label={{ value: "Networth ($)", angle: -90, position: "insideLeft" }} />
+                  <XAxis
+                    dataKey="step"
+                    label={{
+                      value: "Steps",
+                      position: "insideBottom",
+                      offset: -5,
+                    }}
+                  />
+                  <YAxis
+                    label={{
+                      value: "Networth ($)",
+                      angle: -90,
+                      position: "insideLeft",
+                    }}
+                  />
                   <Tooltip />
                   <Line
                     type="monotone"
@@ -118,8 +134,9 @@ const Agent: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-full h-40 bg-gray-200 rounded-2xl shadow-md shadow-blue-200 overflow-y-auto p-4">
-          <table className="table-auto w-full text-left text-sm">
+        
+        <div className="w-full h-50 bg-gray-200 rounded-2xl shadow-md shadow-blue-200 overflow-x-auto lg:overflow-y-auto p-4 mt-15">
+          <table className="min-w-[600px] table-auto w-full text-left text-sm">
             <thead>
               <tr>
                 <th className="px-2">Step</th>
