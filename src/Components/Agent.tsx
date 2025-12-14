@@ -44,7 +44,7 @@ const Agent: React.FC = () => {
       stepRef.current += 1;
       const step = stepRef.current;
 
-      const response = await fetch(`https://web-production-7ce7.up.railway.app/agent`);
+      const response = await fetch(`https://saisankarswarna-agent-swarna.hf.space/agent`);
       const data = await response.json();
 
       const networthNum = Number(data.totalcash?.replace("$", ""));
