@@ -8,7 +8,7 @@ const Develop: React.FC = () => {
     navigate("/Agent")
   }
   const toprofile=()=>{
-    window.open("https://web-portfolio-wine-five.vercel.app/")
+    window.open("https://swarna7414.github.io/SwarnaSaiSankar/")
   }
   return (
     <section className="min-h-screen bg-white text-black flex flex-col items-center justify-center px-4 py-10">
