@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import "../src/App.css"
+import "./App.css"
 import { StrictMode } from 'react'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
