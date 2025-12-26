@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import comingSoonImage from "../assets/image.png";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,26 @@ const Develop: React.FC = () => {
   const toprofile=()=>{
     window.open("https://swarna7414.github.io/SwarnaSaiSankar/")
   }
+
+  
+  useEffect(() => {
+    const healthCheckUrl = "https://saisankarswarna-agent-swarna.hf.space/health";
+    
+
+    fetch(healthCheckUrl).catch(() => {
+      
+    });
+
+    
+    const interval = setInterval(() => {
+      fetch(healthCheckUrl).catch(() => {
+        
+      });
+    }, 39600000); 
+
+   
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="min-h-screen bg-white text-black flex flex-col items-center justify-center px-4 py-10">
       <img
